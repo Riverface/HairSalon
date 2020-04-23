@@ -12584,11 +12584,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Projects\\Programming\\Salon\\Salon\\Salon.csproj",
-      "projectName": "Salon",
-      "projectPath": "d:\\Projects\\Programming\\Salon\\Salon\\Salon.csproj",
+      "projectUniqueName": "D:\\Projects\\Programming\\HairSalon\\hairsalon\\HairSalon.csproj",
+      "projectName": "HairSalon",
+      "projectPath": "D:\\Projects\\Programming\\HairSalon\\hairsalon\\HairSalon.csproj",
       "packagesPath": "C:\\Users\\sonos\\.nuget\\packages\\",
-      "outputPath": "d:\\Projects\\Programming\\Salon\\Salon\\obj\\",
+      "outputPath": "D:\\Projects\\Programming\\HairSalon\\hairsalon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

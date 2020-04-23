@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BWarcqcQtV/z5aATPgRnyHElWqwAVSwwESVHeOtPcVv36cdYlEaMsYl/SfxSNphHHObIcsgksUkbHMzPQvk29A==",
+  "dgSpecHash": "IWkZzxOQ0sQDC9i1+oKizGYTclAKAlqv4GngixePAW+nL2wLOHDOgm4gcxEppUX+uhpbhjG8Zhomb6sEX7nO7g==",
   "success": true,
-  "projectFilePath": "d:\\Projects\\Programming\\Salon\\Salon\\Salon.csproj",
+  "projectFilePath": "D:\\Projects\\Programming\\HairSalon\\hairsalon\\HairSalon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sonos\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Users\\sonos\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

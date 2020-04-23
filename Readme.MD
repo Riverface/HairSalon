@@ -1,6 +1,6 @@
 # README Boilerplate
 
-Claire's Salon. Tracks Clients and 
+Claire's Salon. Tracks clients and 
 
 ## Table of Contents
 

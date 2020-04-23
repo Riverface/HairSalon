@@ -2,22 +2,22 @@
   Layout = "_Layout";
 }
 
-@using ToDoList.Models;
-@model ToDoList.Models.Stylist;
+@using HairSalon.Models;
+@model HairSalon.Models.Stylist;
 
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 <ul>
-@if (@Model.Items.Count == 0)
+@if (@Model.clients.Count == 0)
 {
   <p>no items found</p>
 }
 
-@foreach (Client client in @Model.Items)
+@foreach (Client client in @Model.clients)
 {
-  <li>Description: @item.Description</li>
+  <li>Description: @client.Name</li>
 }
 </ul>
 
