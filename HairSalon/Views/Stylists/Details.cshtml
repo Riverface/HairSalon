@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout";
+Layout = "_Layout";
 }
 
 @using HairSalon.Models;
@@ -10,17 +10,26 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 <ul>
-@if (@Model.clients.Count == 0)
-{
-  <p>no items found</p>
-}
+  @if (@Model.clients.Count == 0)
+  {
+  <p>no clients found</p>
+  }
+  <table>
+    <tr>
+      <td>
+        ID
+      </td>
+      <td>Name</td>
+      @foreach (Client client in @Model.clients)
+      {
+    <tr>
+      <td>@client.ClientId</td>
+      <td> @Html.ActionLink(@client.Name, "Details", "clients", new {id=client.ClientId}) </td>
+    </tr>
+    }
 
-@foreach (Client client in @Model.clients)
-{
-  <li>Description: @client.Name</li>
-}
-</ul>
+  </table>
 
-<p>@Html.ActionLink("Back to stylists", "Index")</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
+  <p>@Html.ActionLink("Back to stylists", "Index")</p>
+  <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+  <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>

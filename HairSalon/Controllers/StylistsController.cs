@@ -27,6 +27,7 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Create(Stylist stylist)
         {
+            stylist.Name = stylist.first_name + " " + stylist.last_name;
             _db.stylists.Add(stylist);
             _db.SaveChanges();
             return RedirectToAction("Index");
@@ -44,6 +45,7 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Edit(Stylist stylist)
         {
+            stylist.Name = stylist.first_name + " " + stylist.last_name;
             _db.Entry(stylist).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");

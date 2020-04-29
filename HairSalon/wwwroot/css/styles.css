@@ -1,0 +1,32 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+table {
+    background-color: pink;
+}
+
+body {
+    background-color: lavender;
+}
+
+td:nth-child(1n) {
+    background: palegreen;
+}
+
+td:nth-child(2n) {
+    background: palevioletred;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    vertical-align: text-top;
+}
+
+.jumbotron {
+    align-content: center;
+}

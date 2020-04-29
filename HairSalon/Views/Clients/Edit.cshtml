@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout";
+Layout = "_Layout";
 }
 
 @model HairSalon.Models.Client
@@ -10,15 +10,16 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.ClientId)
+  @Html.HiddenFor(model => model.ClientId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+  @Html.LabelFor(model =>model.first_name)
+  @Html.TextBoxFor(model => model.first_name)
+  @Html.LabelFor(model => Model.last_name)
+  @Html.TextBoxFor(model => Model.last_name)
+  @Html.LabelFor(model => model.StylistId);
+  @Html.DropDownList("StylistId")
 
-    @Html.LabelFor(model => model.StylistId)
-    @Html.DropDownList("Id")
-
-    <input type="submit" value="Save" />
+  <input type="submit" value="Save" />
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
