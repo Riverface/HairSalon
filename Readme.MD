@@ -9,16 +9,12 @@ Claire's Salon. Tracks clients and
 - [Support](#support)
 - [Contributing](#contributing)
 
-## Specs
-
-* Salon owner is able to see list of all stylists
-    * Salon owner is able to use a database
-
 ## User stipulations
 * As the salon owner, I need to be able to see a list of all stylists.
 * As the salon owner, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
 * As the salon owner, I need to add new stylists to our system when they are hired.
 * As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
+
 
 ## Installation
 
@@ -50,8 +46,8 @@ CREATE TABLE `hair_salon`.`stylists` (
 
 ## Support
 
-Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new) for support.
+Please [open an issue](https://github.com/Riverface/HairSalon/issues/new) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/Riverface/HairSalon/compare/).
