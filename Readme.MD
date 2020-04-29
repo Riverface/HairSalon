@@ -24,19 +24,29 @@ Claire's Salon. Tracks clients and
 
 Download to a directory, navigate to "Salon" inside of "Salon.Solution" and use ```dotnet run``` in the terminal.
 
-## Usage
+## Documentation
+Here is the full series of Create commands used to create the database:
 
-Replace the contents of `README.md` with your project's:
+~~~~sql
+CREATE DATABASE `hair_salon`; 
 
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-- Licence
+CREATE TABLE `hair_salon`.`clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `StylistId` int,
+  `First_Name` varchar(45),
+  `Last_Name` varchar(45),
+  `Name` varchar(45),
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `hair_salon`.`stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `First_Name` varchar(45),
+  `Last_Name` varchar(45),
+  `Name` varchar(45),
+  PRIMARY KEY (`StylistId`)
+);
 
-Feel free to remove any sections that aren't applicable to your project.
+~~~~
 
 ## Support
 

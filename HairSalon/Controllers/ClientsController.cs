@@ -33,7 +33,7 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Create(Client client)
         {
-            client.Name = client.first_name + " " + client.last_name;
+
             _db.clients.Add(client);
             _db.SaveChanges();
             return RedirectToAction("Index");
@@ -56,7 +56,7 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Edit(Client client)
         {
-            client.Name = client.first_name + " " + client.last_name;
+            
             _db.Entry(client).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");

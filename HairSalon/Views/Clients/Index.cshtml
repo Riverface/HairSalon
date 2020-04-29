@@ -3,8 +3,8 @@ Layout = "_Layout";
 }
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>
-  <h1>Clients</h1>
-  @if (@ViewBag.Clients.Count == 0)
+  <h1>clients</h1>
+  @if (@ViewBag.clients.Count == 0)
   {
   <h3>No clients have been added yet!</h3>
   }
@@ -15,13 +15,13 @@ Layout = "_Layout";
         ID
       </td>
       <td>Name</td>
-      <td>Stylist</td>
+      <td>Stylist Name</td>
     </tr>
-    @foreach (Client client in ViewBag.Clients)
+    @foreach (Client client in ViewBag.clients)
     {
     <tr>
+      <td>@client.ClientId</td>
       <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td>
-      <td>@client.StylistId</td>
       @foreach (Stylist stylist in ViewBag.stylists)
       {
       @if(stylist.StylistId == client.StylistId)
