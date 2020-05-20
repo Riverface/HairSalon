@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HairSalon.Controllers
 {
-    public class clientsController : Controller
+    public class ClientsController : Controller
     {
         private readonly HairSalonContext _db;
 
-        public clientsController(HairSalonContext db)
+        public ClientsController(HairSalonContext db)
         {
             _db = db;
         }
         // This separates the boilerplate from the Controller Code
         // The schmuck writing this code should not put things before these comments
+
         public ActionResult Index()
         {
             ViewBag.clients = _db.clients.ToList();
@@ -33,7 +34,6 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Create(Client client)
         {
-
             _db.clients.Add(client);
             _db.SaveChanges();
             return RedirectToAction("Index");
@@ -56,7 +56,6 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Edit(Client client)
         {
-            
             _db.Entry(client).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");

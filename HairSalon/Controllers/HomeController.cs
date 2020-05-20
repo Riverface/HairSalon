@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ToDoList.Controllers
+namespace HairSalon.Controllers
 {
     public class HomeController : Controller
     {
-
         [HttpGet("/")]
         public ActionResult Index()
         {

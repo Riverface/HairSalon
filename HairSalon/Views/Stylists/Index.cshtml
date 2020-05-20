@@ -12,23 +12,24 @@
   <h3>No stylists have been added yet!</h3>
 } 
 
-else{
+else
+{
   <table>
-  <tr>
-<td>
-ID
-</td>
-<td>Name</td>
-  </tr>
+    <tr>
+      <td>
+        ID
+      </td>
+      <td>Name</td>
+    </tr>
+
   @foreach (Stylist stylist in Model)
   {
     <tr>
-
-    <td> @stylist.StylistId</td> 
-    <td>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</td>
-    </tr>
-    
+      <td>@stylist.StylistId</td> 
+      <td>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</td>
+    </tr>  
   }
+  
   </table>
 }
 

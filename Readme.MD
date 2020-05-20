@@ -1,11 +1,13 @@
-# README Boilerplate
 
-Claire's Salon. Tracks clients and 
+
+# Claire's Salon
+
+
+Claire's Salon. Tracks Clients and Stylists.
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [Support](#support)
 - [Contributing](#contributing)
 
@@ -15,34 +17,34 @@ Claire's Salon. Tracks clients and
 * As the salon owner, I need to add new stylists to our system when they are hired.
 * As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
 
-
 ## Installation
 
-Download to a directory, navigate to "Salon" inside of "Salon.Solution" and use ```dotnet run``` in the terminal.
-
-## Documentation
-Here is the full series of Create commands used to create the database:
+* Clone or Download repo to a directory.
+* Open Terminal.
+* Start MySql.
+* Here is the full series of Create commands used to create the database:
 
 ~~~~sql
-CREATE DATABASE `hair_salon`; 
+CREATE DATABASE `robert_smith`; 
 
-CREATE TABLE `hair_salon`.`clients` (
+CREATE TABLE `robert_smith`.`clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `StylistId` int,
-  `First_Name` varchar(45),
-  `Last_Name` varchar(45),
+  `FirstName` varchar(45),
+  `LastName` varchar(45),
   `Name` varchar(45),
   PRIMARY KEY (`ClientId`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-CREATE TABLE `hair_salon`.`stylists` (
+); 
+CREATE TABLE `robert_smith`.`stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
-  `First_Name` varchar(45),
-  `Last_Name` varchar(45),
+  `FirstName` varchar(45),
+  `LastName` varchar(45),
   `Name` varchar(45),
   PRIMARY KEY (`StylistId`)
 );
-
 ~~~~
+
+* navigate to "HairSalon" inside of "HairSalon.Solution" and use ```dotnet run``` in the terminal.
 
 ## Support
 
@@ -51,3 +53,15 @@ Please [open an issue](https://github.com/Riverface/HairSalon/issues/new) for su
 ## Contributing
 
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/Riverface/HairSalon/compare/).
+
+## Technologies Used
+    ASP.NET
+    Razor
+    HTML
+    C#
+    Bootstrap
+
+## Legal
+Copyright (c) 2020 Robert Smith
+
+This software is licensed under Creative Commons 0 license. Use however you want, in fact please do not credit me.

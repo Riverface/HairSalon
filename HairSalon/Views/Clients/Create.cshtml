@@ -1,20 +1,19 @@
 @{
-Layout = "_Layout";
+  Layout = "_Layout";
 }
-
 @model HairSalon.Models.Client
 
 <h4>Add a new task</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model =>model.First_Name)
-  @Html.TextBoxFor(model => model.First_Name)
-  @Html.LabelFor(model => Model.Last_Name)
-  @Html.TextBoxFor(model => Model.Last_Name)
+  @Html.LabelFor(model =>model.FirstName)
+  @Html.TextBoxFor(model => model.FirstName)
+  @Html.LabelFor(model => Model.LastName)
+  @Html.TextBoxFor(model => Model.LastName)
   @Html.LabelFor(model => model.StylistId);
   @Html.DropDownList("StylistId");
-
   <input type="submit" value="Add new item" class="btn btn-default" />
 }
+
 <p>@Html.ActionLink("Show all items", "Index")</p>
