@@ -12,10 +12,10 @@ Claire's Salon. Tracks Clients and Stylists.
 - [Contributing](#contributing)
 
 ## User stipulations
-* As the salon owner, I need to be able to see a list of all stylists.
-* As the salon owner, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
-* As the salon owner, I need to add new stylists to our system when they are hired.
-* As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
+* As the salon owner, I need to be able to see a list of all Stylists.
+* As the salon owner, I need to be able to select a Stylist, see their details, and see a list of all Clients that belong to that Stylist.
+* As the salon owner, I need to add new Stylists to our system when they are hired.
+* As the salon owner, I need to be able to add new Clients to a specific Stylist. I should not be able to add a client if no Stylists have been added.
 
 ## Installation
 
@@ -27,19 +27,18 @@ Claire's Salon. Tracks Clients and Stylists.
 ~~~~sql
 CREATE DATABASE `robert_smith`; 
 
-CREATE TABLE `robert_smith`.`clients` (
+CREATE TABLE `robert_smith`.`Clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `StylistId` int,
   `FirstName` varchar(45),
   `LastName` varchar(45),
-  `Name` varchar(45),
   PRIMARY KEY (`ClientId`)
 ); 
-CREATE TABLE `robert_smith`.`stylists` (
+CREATE TABLE `robert_smith`.`Stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(45),
   `LastName` varchar(45),
-  `Name` varchar(45),
+
   PRIMARY KEY (`StylistId`)
 );
 ~~~~

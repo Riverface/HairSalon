@@ -8,13 +8,13 @@ namespace HairSalon.Models
         public int StylistId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public virtual ICollection<Client> clients { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
         [NotMapped()]
-        public string Name => $"{FirstName}{LastName}";
+        public string Name => $"{FirstName} {LastName}";
         
         public Stylist()
         {
-            this.clients = new HashSet<Client>();
+            this.Clients = new HashSet<Client>();
         }
     }
 }

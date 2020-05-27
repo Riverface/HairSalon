@@ -11,9 +11,9 @@
 
 <ul>
 
-  @if (@Model.clients.Count == 0)
+  @if (@Model.Clients.Count == 0)
   {
-    <p>no clients found</p>
+    <p>no Clients found</p>
   }
 
   <table>
@@ -21,18 +21,18 @@
       <td>
         ID
       </td>
-      <td>Name</td>
+      <td>Client Name</td>
       
-      @foreach (Client client in @Model.clients)
+      @foreach (Client client in @Model.Clients)
       {
         <tr>
           <td>@client.ClientId</td>
-          <td> @Html.ActionLink(@client.Name, "Details", "clients", new {id=client.ClientId}) </td>
+          <td> @Html.ActionLink(@client.Name, "Details", "Clients", new {id=client.ClientId}) </td>
         </tr>
       }
 
   </table>
 
-  <p>@Html.ActionLink("Back to stylists", "Index")</p>
+  <p>@Html.ActionLink("Back to Stylists", "Index")</p>
   <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
   <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>

@@ -9,6 +9,6 @@ namespace HairSalon.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [NotMapped()]
-         public string Name =>$"{FirstName}{LastName}";
+         public string Name =>$"{FirstName} {LastName}";
     }
 }
