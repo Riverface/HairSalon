@@ -4,14 +4,14 @@ Layout = "_Layout";
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>
 
-  <h1>Clients</h1>
+<h1>Clients</h1>
 
-  @if (@ViewBag.Clients.Count == 0)
-  {
-   <h3>No Clients have been added yet!</h3>
-  }
-
-  else{
+@if (@ViewBag.Clients.Count == 0)
+{
+  <h3>No Clients have been added yet!</h3>
+}
+else
+{
   <table>
     <tr>
       <td>
@@ -21,27 +21,21 @@ Layout = "_Layout";
       <td>Stylist Name</td>
     </tr>
 
-@foreach (Client client in ViewBag.Clients)
-{
-<tr>
-  <td>@client.ClientId</td>
-  <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td>
-
-  @foreach (Stylist Stylist in ViewBag.Stylists)
-  {
-
-    @if(Stylist.StylistId == client.StylistId)
+    @foreach (Client client in ViewBag.Clients)
     {
-    <td>@Html.ActionLink($"{@Stylist.Name}", "Details", "Stylists", new { id = client.StylistId })</td>
+      <tr>
+        <td>@client.ClientId</td>
+        <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td>
+        @foreach (Stylist Stylist in ViewBag.Stylists)
+        {
+          @if(Stylist.StylistId == client.StylistId)
+          {
+            <td>@Html.ActionLink($"{@Stylist.Name}", "Details", "Stylists", new { id = client.StylistId })</td>
+          }
+        }
+      </tr>
     }
-
-  }
-
-</tr>
-
+  </table>
 }
-
-</table>}
-
-  <p>@Html.ActionLink("Add new Client", "Create")</p>
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Add new Client", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
