@@ -27,14 +27,14 @@ Claire's Salon. Tracks Clients and Stylists.
 ~~~~sql
 CREATE DATABASE `robert_smith`; 
 
-CREATE TABLE `robert_smith`.`Clients` (
+CREATE TABLE `robert_smith`.`clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `StylistId` int,
   `FirstName` varchar(45),
   `LastName` varchar(45),
   PRIMARY KEY (`ClientId`)
 ); 
-CREATE TABLE `robert_smith`.`Stylists` (
+CREATE TABLE `robert_smith`.`stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(45),
   `LastName` varchar(45),
