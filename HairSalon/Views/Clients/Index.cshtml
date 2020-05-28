@@ -21,28 +21,27 @@ Layout = "_Layout";
       <td>Stylist Name</td>
     </tr>
 
-    @foreach (Client client in ViewBag.Clients)
+@foreach (Client client in ViewBag.Clients)
+{
+<tr>
+  <td>@client.ClientId</td>
+  <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td>
+
+  @foreach (Stylist Stylist in ViewBag.Stylists)
+  {
+
+    @if(Stylist.StylistId == client.StylistId)
     {
-    <tr>
-      <td>@client.ClientId</td>
-      <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</td>
-
-      @foreach (Stylist Stylist in ViewBag.Stylists)
-      {
-
-        @if(Stylist.StylistId == client.StylistId)
-        {
-        <td>@Html.ActionLink($"{@Stylist.Name}", "Details", "Stylists", new { id = client.StylistId })</td>
-        }
-
-      }
-
-    </tr>
-
+    <td>@Html.ActionLink($"{@Stylist.Name}", "Details", "Stylists", new { id = client.StylistId })</td>
     }
- 
-  </table>
+
   }
+
+</tr>
+
+}
+
+</table>}
 
   <p>@Html.ActionLink("Add new Client", "Create")</p>
   <p>@Html.ActionLink("Home", "Index", "Home")</p>
